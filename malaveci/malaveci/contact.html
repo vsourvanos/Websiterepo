@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">
+    <img src="../photos/projectLogo.png" alt="Gym Logo">
+  </div>
+  <div class="logoname">TRANS<span>FORMERS</span></div> 
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Main Page</a></li>
+
+      <li class="dropdown">
+        <a href="#">Activities ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="trex.html">T-Rex</a></li>
+          <li><a href="pilates.html">Pilates</a></li>
+          <li><a href="groupCycling.html">Group Cycling</a></li>
+        </ul>
+      </li>
+
+      <li><a href="membership.html">Membership</a></li>
+
+      <li class="dropdown">
+        <a href="#">Schedule ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="scheduleTrex.html">T-Rex</a></li>
+          <li><a href="schedulePilates.html">Pilates</a></li>
+          <li><a href="scheduleGroupCycling.html">Group Cycling</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contact.html">Contact Us</a></li>
+
+      <li class="dropdown">
+        <a href="#">Others ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="other-locations.html">Other Locations</a></li>
+          <li><a href="equipments.html">Equipments</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="rulesPolicies.html">Rules & Policies</a></li>
+          <li><a href="qa.html">Q&A</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">About Us ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="../personalPage.html">Persea Malaveci</a></li>
+          <li><a href="#">Tea Zetova</a></li>
+          <li><a href="#">Vasilis Sourvanos</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<section class="contact">
+  <div class="contact-content">
+    <h1>CONTACT US</h1>
+    <p>
+      We are here to help — reach out anytime.
+    </p>
+  </div>
+</section>
+
+<section class="contact-main">
+  <div class="contact-info">
+
+    <h2>Get In Touch</h2>
+    <p>
+      Whether you have questions about memberships, schedules, personal training, or facilities,
+      our team is ready to assist you. We respond quickly and professionally.
+    </p>
+  </div>
+
+  </section>
+
+  <div class="contact-form-box">
+    <h2>Send Us A Message</h2>
+    <p>
+      Fill out the form and we'll get back to you shortly.
+    </p>
+
+    <form class="contact-form" id="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<div id="success-popup" class="popup-overlay">
+  <div class="popup-box">
+    <p>
+      Your message was sent successfully!
+    </p>
+    <button id="popup-ok">OK</button>
+  </div>
+</div>
+
+<footer>
+     <div class="footer-links">
+        <a href="https://www.facebook.com/TransformersFitnessClub/">Facebook</a>
+        <a href="https://www.instagram.com/transformersfc/?hl=en">Instagram</a>
+        <a href="https://x.com/">Twitter</a>
+     </div>
+  <p>&copy; 2025 Transformers Gym. All rights reserved.</p>
+</footer>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const popup = document.getElementById("success-popup");
+  const popupOk = document.getElementById("popup-ok");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); //stop page refreshing
+    popup.style.display = "flex"; //show pop-up
+    form.reset(); //reset the form
+  });
+
+  popupOk.addEventListener("click", function() { // "Ok" button pop-up
+    popup.style.display = "none"; //hide pop-out
+  });
+</script>
+
+</body>
+</html>
